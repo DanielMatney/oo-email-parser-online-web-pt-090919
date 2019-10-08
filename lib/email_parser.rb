@@ -13,22 +13,13 @@ class EmailAddressParser
     emails = @emails.split(/[\s,',', ]/)
     emails = emails.reject {|word| word == ""}
     emails = emails.each do |email|
+    new_emails = emails
       if emails.include?(email)
-      else emails << email
+      else new_emails << email
       end
     end
-    emails
+    new_emails
   end
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   
 end
