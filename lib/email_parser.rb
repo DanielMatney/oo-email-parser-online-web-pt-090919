@@ -12,8 +12,8 @@ class EmailAddressParser
   def parse
     emails = @emails.split(/[\s,',', ]/)
     emails = emails.reject {|word| word == ""}
+    new_emails
     emails = emails.each do |email|
-    new_emails = emails
       if emails.include?(email)
       else new_emails << email
       end
