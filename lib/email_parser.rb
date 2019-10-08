@@ -14,7 +14,7 @@ class EmailAddressParser
     emails = emails.reject {|word| word == ""}
     new_emails = emails
     emails = emails.each do |email|
-      if emails.include?(email)
+      if new_emails.include?(email)
       else new_emails << email
       end
     end
